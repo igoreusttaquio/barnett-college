@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BarnettCollege.Models
 {
-    public class OfficeAssigment
+    public class OfficeAssignment
     {
         /*By default, EF treats the key as non-database-generated 
         because the column is for an identifying relationship.*/
