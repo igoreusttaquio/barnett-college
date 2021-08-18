@@ -22,8 +22,9 @@ namespace BarnettCollege.Controllers
         // GET: Courses
         public async Task<IActionResult> Index()
         {
-            var schoolContext = _context.Courses.Include(c => c.Department);
-            return View(await schoolContext.ToListAsync());
+            // eager loading for the Department navigation property by using the Include method.
+            var courses = _context.Courses.Include(c => c.Department);
+            return View(await courses.ToListAsync());
         }
 
         // GET: Courses/Details/5
